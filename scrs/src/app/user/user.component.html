@@ -1,0 +1,56 @@
+<div class="alert alert-danger col-10" *ngIf="userExist">
+    A user with this Email already exist!!!
+</div>
+<div class="alert alert-success col-10" *ngIf="isCreated">
+    Congratulations your account was created
+</div>
+
+<form (ngSubmit)="createuser()">
+    <div class="form-group">
+        <label form="email" class="col-2 col-form-label">Email</label>
+        <div class="col-10" >
+            <input type="email" name="email" id="email" class="form-control" [(ngModel)]="user.email">
+        </div>
+        <div class="col-10" *ngIf="userError?.email">
+             <span class="text text-danger">{{userError.email}}</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label form="name" class="col-2 col-form-label">Name</label>
+        <div class="col-10" >
+            <input type="name" name="name" id="name" class="form-control" [(ngModel)]="user.name">
+        </div>
+        <div class="col-10" *ngIf="userError?.name">
+            <span class="text text-danger">{{userError.name}}</span>
+       </div>
+    </div>
+    <div class="form-group">
+        <label form="password" class="col-2 col-form-label">Password</label>
+        <div class="col-10" >
+            <input type="password" name="password" id="password" class="form-control" [(ngModel)]="user.password">
+        </div>
+        <div class="col-10" *ngIf="userError?.password">
+            <span class="text text-danger">{{userError.password}}</span>
+       </div>
+    </div>
+    <div class="form-group">
+        <label form="age" class="col-2 col-form-label">Age</label>
+        <div class="col-10" >
+            <input type="text" name="age" id="age" class="form-control" [(ngModel)]="user.age">
+        </div>
+        <div class="col-10" *ngIf="userError?.age">
+            <span class="text text-danger">{{userError.age}}</span>
+       </div>
+    </div>
+    <div class="form-group">
+        <label form="phoneNum" class="col-2 col-form-label">Phone Number</label>
+        <div class="col-10" >
+            <input type="text" name="phoneNum" id="phoneNum" class="form-control" [(ngModel)]="user.phoneNum">
+        </div>
+        <div class="col-10" *ngIf="userError?.phoneNum">
+            <span class="text text-danger">{{userError.phoneNum}}</span>
+       </div>
+
+    </div>
+    <input type="submit" value="createuser" class="btn btn-primary">
+</form>
