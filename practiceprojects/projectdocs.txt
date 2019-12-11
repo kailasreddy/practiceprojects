@@ -1,0 +1,14 @@
+http://localhost:8085/date?d=2012-04-24
+
+@GetMapping("/date")
+	public List<Employee> getEmployees(@RequestParam("d") @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) Date date)
+	{
+		return employeeRepository.findAllByDateOfBirth(date);
+	}
+	
+
+https://www.baeldung.com/spring-boot-formatting-json-dates
+
+https://stackoverflow.com/questions/40613171/spring-data-jpa-custom-query-with-param-date-doesnt-work
+
+https://www.baeldung.com/hibernate-date-time
