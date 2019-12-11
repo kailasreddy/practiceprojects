@@ -3,33 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListuserComponent } from './components/listuser/listuser.component';
-import { UserFormComponent } from './components/user-form/user-form.component';
-import {RouterModule, Routes} from '@angular/router';
-import {UserService} from './shared_service/user.service';
-import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
-const appRoutes:Routes=[
-  {path:'', component:ListuserComponent},
-  {path:'op',component:UserFormComponent}
-
-]
-
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListuserComponent,
-    UserFormComponent
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
-    HttpModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
