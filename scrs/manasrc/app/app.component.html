@@ -1,0 +1,42 @@
+<div class="container" style="width: 100%;">
+  <div class="row" style="background-color: skyblue; padding-left: 1%;padding-top: 1%;">
+    
+      <h2>Employee Attendance Monitoring System</h2>
+
+  </div>
+  <div class="row">
+    <div class="col-md-6" >
+      <img src="assets\images\homepageimg.png">
+    </div>
+    <div class="col-md-6" style="padding-left: 20%;padding-top: 6%;">
+       
+       <form (ngSubmit)="processForm()" #f="ngForm">
+          <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+         <div class="form-group">
+           <h2 style="color: lightgreen;">Login Here</h2>
+
+         </div>
+         <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id" ngModel class="form-control" style="width:250px"/>
+         </div>
+         <div  class="form-group">
+            <label for="select">User Type</label>
+            <select id="userType" ngModel name="userType" class="form-control" style="width:250px">
+              <option value="employee" selected>employee</option>
+              <option value="admin">admin</option>
+              <option value="adminstaff">adminstaff</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label for="id">Password</label>
+            <input type="password" name="password" id="password" ngModel class="form-control" style="width:250px"/>
+         </div>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login" class="btn btn-primary">
+        </div>
+       </form>
+    </div>
+  </div>
+</div>
