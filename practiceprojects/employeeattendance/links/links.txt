@@ -1,0 +1,2 @@
+https://github.com/mdbootstrap/Admin-Dashboard-Template-Angular-Bootstrap/issues/2
+https://stackoverflow.com/questions/38510369/cannot-find-module-angular-http
